@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Canvas for Three.js Background -->
+    <canvas id="hero-canvas"
+        style="position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; opacity: 0.3; pointer-events: none;"></canvas>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="header-socials">
+                <a href="https://github.com/Argon-Sb" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sb-mohapatra" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:sbmohapatra0001@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero user-select-none">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>Hi, I'm <span class="highlight">Satyabrata Mohapatra</span></h1>
+                <p>AI/ML & Data Science Professional</p>
+                <a href="#projects" class="btn primary">View Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-image gsap-reveal">
+
+                    <div class="career-objective-block">
+                        <h3>Career Objective</h3>
+                        <p>As an enthusiastic and results-oriented final year IT student at BCET, I am looking for an
+                            entry level position in the domain of AI/ML and Data Science. I am eager to use my
+                            analytical skills, machine learning knowledge, and data driven passion to work on innovative
+                            projects and grow within a fast-paced organization.</p>
+                    </div>
+
+                    <div class="strengths-block" style="margin-top: 30px;">
+                        <h3>Strengths</h3>
+                        <div class="skill-tags">
+                            <span>Quick Learner</span>
+                            <span>Good Communication</span>
+                            <span>Team Player</span>
+                            <span>Leadership Abilities</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about-text gsap-reveal">
+
+
+                    <div class="education content-block">
+                        <h3>Education</h3>
+                        <div class="edu-item">
+                            <h4>Bachelor of Technology (B.Tech) in IT</h4>
+                            <p>Balasore College of Engineering and Technology (2022-2026)</p>
+                            <p>CGPA: 8</p>
+                        </div>
+                        <div class="edu-item">
+                            <h4>Class XII (Science)</h4>
+                            <p>U.N. College Soro (2020-2022)</p>
+                            <p>Percentage: 73.83%</p>
+                        </div>
+                        <div class="edu-item">
+                            <h4>Class X</h4>
+                            <p>D.N. High School, Balasore (2021)</p>
+                            <p>Percentage: 76.66%</p>
+                        </div>
+                    </div>
+
+                    <div class="personal-details content-block" style="margin-top: 30px;">
+                        <h3>Personal Details</h3>
+                        <ul style="list-style: none; color: var(--text-muted);">
+                            <li><strong style="color: white;">Date of Birth:</strong> 29/05/2004</li>
+                            <li><strong style="color: white;">Languages:</strong> English, Hindi, Odia</li>
+                            <li><strong style="color: white;">Hobbies:</strong> Reading, Travelling, Coding</li>
+                            <li><strong style="color: white;">Address:</strong> Mayurbhanj, Odisha</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid gsap-reveal">
+
+                <!-- Chart Container -->
+                <div class="skill-category" style="grid-column: span 3;">
+                    <h3>Skills Overview</h3>
+                    <canvas id="skillsChart" style="max-height: 400px; width: 100%;"></canvas>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-tags">
+                        <span>TensorFlow</span>
+                        <span>Keras</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Databases</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>Power BI</span>
+                        <span>Tableau</span>
+                        <span>Git/GitHub</span>
+                        <span>VS Code</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid gsap-reveal">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="card-image">
+                        <img src="assets/images/face_recognition.png" alt="Face Recognition System"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <h3>Face Recognition Attendance System</h3>
+                        <p>An AI/ML-driven system using OpenCV and Python to automate real-time student attendance,
+                            boosting efficiency and eliminating errors.</p>
+                        <span class="tech-tag">Python</span> <span class="tech-tag">OpenCV</span>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="card-image">
+                        <img src="assets/images/atmoxplorer.png" alt="Atmoxplorer Drone"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <h3>Atmoxplorer (DRDO Internship)</h3>
+                        <p>Analyzed upper Wind Data and ISRO/Komoline weather datasets. Developed the front-end for
+                            Atmoxplorer during internship at ITR, DRDO.</p>
+                        <span class="tech-tag">Data Analysis</span> <span class="tech-tag">Front-end</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications" style="padding: 100px 0; background: var(--card-bg);">
+        <div class="container">
+            <h2>Certifications & Achievements</h2>
+            <div class="cert-grid gsap-reveal"
+                style="display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="cert-card">
+                    <h3>Certifications & Internships</h3>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 15px; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;">Completed one month Internship on AI & ML in CTTC Bhubaneswar.
+                        </li>
+                        <li style="margin-bottom: 10px;">Completed one month training in ITR, DRDO Chandipur Balasore.
+                        </li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <h3>Co-Curricular Activities</h3>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 15px; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;">Participated in IIT Bombay Techfest 2024 in Data Science
+                            Workshop.</li>
+                        <li style="margin-bottom: 10px;">Participated in IIT Bhubaneswar 24 hours Web Hackathon.</li>
+                        <li style="margin-bottom: 10px;">Participated in "Intelligent Automation: Crafting the Future"
+                            Robotics workshop.</li>
+                        <li style="margin-bottom: 10px;">Paper Presentation in 25th ISTE State Level Annual Student
+                            Convention Odisha.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Satyabrata Mohapatra. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/threejs-setup.js"></script>
+    <script src="js/visualizations.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

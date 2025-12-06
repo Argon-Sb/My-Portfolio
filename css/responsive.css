@@ -1,0 +1,58 @@
+/* --- RESPONSIVE STYLES --- */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: var(--nav-height);
+        height: calc(100vh - var(--nav-height));
+        background: var(--dark-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: right 0.4s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Animate Hamburger */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+        text-align: center;
+    }
+
+    .btn.secondary {
+        margin-left: 0;
+        margin-top: 15px;
+        display: block;
+        /* Stack buttons on small phones */
+        width: 100%;
+    }
+
+    .hero-content .btn {
+        margin: 10px 5px;
+        /* Adjust button margin for mobile */
+        width: auto;
+        display: inline-block;
+    }
+}
